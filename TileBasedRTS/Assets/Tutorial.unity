@@ -319,3 +319,6 @@ MonoBehaviour:
   panSpeed: 20
   panBorderThickness: 10
   panLimit: {x: 100, y: 100}
+  scrollSpeed: 20
+  minY: 20
+  maxY: 80
