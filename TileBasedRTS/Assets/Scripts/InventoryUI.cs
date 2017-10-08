@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InventoryUI : MonoBehaviour {
 
     Inventory inventory;
     public Transform itemsParent;
     InventorySlot[] slots;
+    public GameObject inventoryUI;
 
 	// Use this for initialization
 	void Start () {
