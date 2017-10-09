@@ -40,12 +40,20 @@ public class Inventory : MonoBehaviour {
         }   
         return true;
     }
-    public void Remove(Item item)
+    public bool Remove(Item item)
     {
-        items.Remove(item);
-
-        if (onItemChangedCallback != null)
+        if (!item.isDefaultItem)
+        {
+            if(items.Count == 50) //placeholder if statement for when stockple storage is implemented
+            {
+                Debug.Log("Not enough room in stockpile");
+                return false;
+            }
+            items.Remove(item);
+            if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
+        }
+        return true;
     }
 
 }

@@ -18,4 +18,8 @@ public class InventorySlot : MonoBehaviour {
         icon.sprite = null;
         icon.enabled = false;
     }
+    public void OnRemoveButton()
+    {
+        Inventory.instance.Remove(item);
+    }
 }
